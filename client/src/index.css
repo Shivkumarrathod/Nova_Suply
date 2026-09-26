@@ -32,6 +32,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .profile-menu button:hover { background: #f1f2ed; }
 .wordmark { color: var(--ink); text-decoration: none; font: 600 17px/1 'Manrope'; letter-spacing: 0; }
 .wordmark span { font-weight: 400; color: var(--muted); margin-left: 4px; }
+.wordmark .server-status { width: 9px; height: 9px; margin-left: 10px; border-radius: 50%; flex: none; }
+.wordmark .server-status.is-online { background: #198754; }
+.wordmark .server-status.is-offline { background: #dc3545; }
 main { padding: 0 clamp(20px, 4vw, 64px) 80px; }
 .intro { min-height: 420px; padding: clamp(54px, 8vw, 104px) 0 58px; display: grid; grid-template-columns: minmax(180px, .7fr) 2fr auto; gap: 32px; align-items: end; }
 .kicker, .eyebrow { margin: 0; text-transform: uppercase; font: 600 11px/1.2 'Manrope'; letter-spacing: .14em; }

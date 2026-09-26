@@ -33,12 +33,34 @@ function App() {
   const [cartOpen, setCartOpen] = useState(false)
   const [activePanel, setActivePanel] = useState(null)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [serverOnline, setServerOnline] = useState(false)
 
   useEffect(() => {
     localStorage.setItem('nova-user', JSON.stringify(user))
     localStorage.setItem('nova-cart', JSON.stringify(cart))
     localStorage.setItem('nova-orders', JSON.stringify(orders))
   }, [user, cart, orders])
+
+  useEffect(() => {
+    let isMounted = true
+
+    const checkServerHealth = async () => {
+      try {
+        const response = await fetch('/api/health')
+        if (isMounted) setServerOnline(response.ok)
+      } catch {
+        if (isMounted) setServerOnline(false)
+      }
+    }
+
+    checkServerHealth()
+    const intervalId = window.setInterval(checkServerHealth, 10000)
+
+    return () => {
+      isMounted = false
+      window.clearInterval(intervalId)
+    }
+  }, [])
 
   const cartTotal = cart.reduce((total, product) => total + product.price, 0)
 
@@ -106,7 +128,15 @@ function App() {
             </div>}
           </div>
         </nav>
-        <a className="wordmark" href="#top" aria-label="Nova Supply home">NOVA<span>SUPPLY</span></a>
+        <a className="wordmark" href="#top" aria-label="Nova Supply home">
+          NOVA<span>SUPPLY</span>
+          <span
+            className={`server-status ${serverOnline ? 'is-online' : 'is-offline'}`}
+            title={serverOnline ? 'Server OK' : 'Server error'}
+            role="img"
+            aria-label={serverOnline ? 'Server OK' : 'Server error'}
+          />
+        </a>
       </header>
 
       <main id="top">
