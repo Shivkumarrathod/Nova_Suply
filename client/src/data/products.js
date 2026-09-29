@@ -1,29 +1,14 @@
+export const productCategories = ['All', 'Cooking Oils', 'Cold Pressed', 'Ghee']
+
 export const products = [
-  {
-    id: 'arc-one',
-    eyebrow: 'Daily carry',
-    name: 'Arc One Headphones',
-    price: 189,
-    description: 'Immersive sound, adaptive silence, and a 40-hour battery in a featherlight frame.',
-    image: '/products/arc-one.jpg',
-    accent: '#d9ff43',
-  },
-  {
-    id: 'halo-lamp',
-    eyebrow: 'Ambient living',
-    name: 'Halo Light',
-    price: 129,
-    description: 'A sculptural desk light with warm-to-cool tuning and quiet touch controls.',
-    image: '/products/halo-light.jpg',
-    accent: '#ff795b',
-  },
-  {
-    id: 'form-watch',
-    eyebrow: 'Made to move',
-    name: 'Form Watch',
-    price: 249,
-    description: 'A precise, minimal timepiece built from brushed steel and sapphire glass.',
-    image: '/products/form-watch.jpg',
-    accent: '#4ed8c7',
-  },
+  { id: 'sunflower-gold', category: 'Cooking Oils', name: 'Sunflower Gold Oil', price: 149, size: '1 L', origin: 'High oleic seeds', description: 'A clean, neutral everyday oil for sauteing, frying, and baking.', image: '/products/olive-oil.jpg', badge: 'Everyday pick', accent: '#f2c94c' },
+  { id: 'groundnut-classic', category: 'Cold Pressed', name: 'Cold-Pressed Groundnut Oil', price: 365, size: '1 L', origin: 'Single-origin peanuts', description: 'Naturally aromatic with a high smoke point for confident home cooking.', image: '/products/seeds.jpg', badge: 'Wood pressed', accent: '#d8a64b' },
+  { id: 'mustard-bold', category: 'Cold Pressed', name: 'Bold Mustard Oil', price: 225, size: '1 L', origin: 'First press mustard', description: 'Pungent, golden oil with a distinctive warmth for regional recipes.', image: '/products/seeds.jpg', badge: 'Full flavour', accent: '#e5b72f' },
+  { id: 'coconut-pure', category: 'Cold Pressed', name: 'Virgin Coconut Oil', price: 310, size: '500 ml', origin: 'Fresh coastal coconuts', description: 'Cold extracted for a delicate coconut aroma and naturally smooth finish.', image: '/products/olive-oil.jpg', badge: 'Unrefined', accent: '#d8e3c2' },
+  { id: 'sesame-earth', category: 'Cold Pressed', name: 'Wood-Pressed Sesame Oil', price: 399, size: '1 L', origin: 'White sesame seeds', description: 'Nutty, mellow and traditionally pressed in small batches.', image: '/products/seeds.jpg', badge: 'Small batch', accent: '#d3aa72' },
+  { id: 'rice-bran-light', category: 'Cooking Oils', name: 'Rice Bran Light Oil', price: 175, size: '1 L', origin: 'Whole rice bran', description: 'A balanced, light-bodied oil designed for high-temperature cooking.', image: '/products/cooking-oil.jpg', badge: 'High heat', accent: '#d7c98b' },
+  { id: 'olive-everyday', category: 'Cooking Oils', name: 'Everyday Olive Oil', price: 649, size: '750 ml', origin: 'Mediterranean olives', description: 'A versatile, gently fruity blend for dressings, roasting, and finishing.', image: '/products/olive-oil.jpg', badge: 'Kitchen staple', accent: '#a5b66c' },
+  { id: 'cow-ghee', category: 'Ghee', name: 'Cultured Cow Ghee', price: 595, size: '500 ml', origin: 'Cultured cow butter', description: 'Slow simmered for a rich aroma, golden colour, and clean finish.', image: '/products/ghee.jpg', badge: 'Traditional', accent: '#f0b93d' },
+  { id: 'buffalo-ghee', category: 'Ghee', name: 'Rich Buffalo Ghee', price: 675, size: '500 ml', origin: 'Farm-sourced butter', description: 'Full-bodied ghee with a creamy texture for sweets and slow cooking.', image: '/products/ghee.jpg', badge: 'Extra rich', accent: '#e6c775' },
+  { id: 'avocado-green', category: 'Cooking Oils', name: 'Avocado Cooking Oil', price: 799, size: '500 ml', origin: 'Ripe avocado pulp', description: 'Smooth and mild with a naturally high smoke point for modern kitchens.', image: '/products/coconut.jpg', badge: 'Premium', accent: '#8eb05c' },
 ]
