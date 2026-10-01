@@ -8,7 +8,7 @@ export function AuthDialog({ pendingProduct, onClose, onLogin }) {
         <p className="eyebrow">Member access</p><h2 id="auth-title">Sign in to continue</h2>
         <p>{pendingProduct ? `${pendingProduct.name} is ready to join your cart.` : 'Access your profile, orders, and saved addresses.'}</p>
         <label htmlFor="phone">Phone number</label>
-        <div className="phone-row"><span>+1</span><input id="phone" type="tel" placeholder="555 000 1234" autoFocus /></div>
+        <div className="phone-row"><span>+91</span><input id="phone" type="tel" placeholder="555 000 1234" maxLength={10} autoFocus /></div>
         <button className="primary-button" type="button" onClick={() => onLogin('phone')}>Continue with phone</button>
         <div className="divider"><span>or</span></div>
         <button className="google-button" type="button" onClick={() => onLogin('google')}><b>G</b> Continue with Google</button>
